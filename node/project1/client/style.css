@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    background-color: brown;
+    color: azure;
+}
+
+div{
+    background-color: rgb(0, 0, 70);
+    color: azure;
+    width: 90%;
+    margin: 0 auto;
+}
+
