@@ -1,11 +1,14 @@
-import React from 'react';
-import {SingleUser} from './singleUser';
+import React, { Component } from 'react';
+import SingleListUser from './singleListUser';
 
 
-export const UserList = (props) => {
-    return (
-    <div className="collection">
-        {props.arr.map((item, i) => <SingleUser src={item.picture.thumbnail} name={item.name.first} email={item.email} birth={item.dob} key={i}/>)}
-    </div>
-    )
-  }
+class UserList extends Component {
+    render() {
+        return (
+            <div className="collection">
+                {this.props.arr.map((item, i) => <SingleListUser src={item.picture.thumbnail} name={item.name.first} surname={item.name.last} email={item.email} birth={item.dob} key={i} />)}
+            </div>
+        )
+    }
+}
+export default UserList
