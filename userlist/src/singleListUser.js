@@ -4,7 +4,7 @@ class SingleListUser extends Component {
    
         render() {
             return (
-                <div className="collection-item avatar">
+                <div className={["collection-item avatar" ,((this.props.gender == "female") ? "redish" : "")].join(" ")}>
                     <img className="circle" src={this.props.src} />
                     <p className="title">{this.props.name} {this.props.surname}</p>
                     <p> <i className="tiny material-icons dp48">email</i> {this.props.email.slice(0,3)+"..."+this.props.email.slice(this.props.email.indexOf("@")-3,this.props.email.indexOf("@"))+this.props.email.slice(this.props.email.indexOf("@"))}</p>

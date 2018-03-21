@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import User from "../entities/User";
 
 class UserData extends Component {
     getData() {
@@ -9,6 +10,11 @@ class UserData extends Component {
             .then((response) => {
                 const results = response.results
                 return results;
+            })
+            .then((users) => {
+                return users.map((userData) => {
+                    return new User(userData);
+                })
             })
     }
 }

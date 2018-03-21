@@ -6,7 +6,7 @@ class UserGrid extends Component {
         return (
             <div className="row">
                 {this.props.arr.map((item,i)=>{
-                   return <SingleGridUser  src={item.picture.large} name={item.name.first} surname={item.name.last} email={item.email} birth={item.dob} key={i}/>    
+                   return <SingleGridUser  src={item.photo} name={item.name} email={item.email} birth={item.dob} gender={item.gender} key={i}/>    
                 })}
             </div>
         )
