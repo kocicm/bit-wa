@@ -6,7 +6,7 @@ class UserList extends Component {
     render() {
         return (
             <div className="collection">
-                {this.props.arr.map((item, i) => <SingleListUser src={item.photo} name={item.name} email={item.email} birth={item.dob} gender={item.gender} key={i} />)}
+                {this.props.arr.map((item, i) => <SingleListUser src={item.photo} name={item.name} last={item.last} first={item.first} email={item.email} birth={item.dob} gender={item.gender} key={i} />)}
             </div>
         )
     }

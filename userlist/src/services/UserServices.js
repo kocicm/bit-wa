@@ -19,5 +19,5 @@ class UserData extends Component {
     }
 }
 const userData = new UserData();
-export default userData ;
+export default userData;
 
