@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 import PostDetail from './PostDetail'
 import TitlesFromSameAuthor from './TitlesFromSameAuthor'
 

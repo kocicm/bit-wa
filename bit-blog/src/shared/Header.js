@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Link, Switch, Route, Redirect } from "react-router-dom";
+import React from 'react';
 
 
 const Header = () => {
@@ -12,9 +11,9 @@ const Header = () => {
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Authors</a>
-      <a class="nav-item nav-link" href="#">About</a>
+      <a class="nav-item nav-link active" href="#/home">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#/authors">Authors</a>
+      <a class="nav-item nav-link" href="#/about">About</a>
       
     </div>
   </div>

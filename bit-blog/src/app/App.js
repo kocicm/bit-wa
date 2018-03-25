@@ -7,7 +7,8 @@ import Home from './home/Home';
 import Post from './post/Post';
 import CreatePost from './createPost/CreatePost';
 import AuthorsList from './authorsList/AuthorsList';
-import Author from './author/Author'
+import Author from './author/Author';
+import About from './about/About';
 
 class App extends Component {
   render() {
@@ -19,8 +20,8 @@ class App extends Component {
         <Route exact path='/post/create' component={CreatePost} />
         <Route exact path='/post' component={Post} />
         <Route exact path='/authors' component={AuthorsList} />
-        <Route exact path='/author'  component={Author} />
-
+        <Route exact path='/author' component={Author} />
+        <Route exact path='/about' component={About} />
        
         {/* <Route path='/authors' component={Authors} />
         <Route path='/about' component={About} /> */}
