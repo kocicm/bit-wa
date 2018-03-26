@@ -1,8 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
-const AuthorsItem = () => {
+const AuthorsItem = (props) => {
     return(
-        <h2> Name Surname </h2>
+        <Link to={`/authorDetails/${props.id}`} >
+        <h2> {props.name} </h2>
+        </Link>
     )
 }
 

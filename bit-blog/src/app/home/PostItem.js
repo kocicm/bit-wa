@@ -1,10 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
-const PostItem = () => {
+const PostItem = (props) => {
     return (
         <React.Fragment>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit .. </p>
+            <Link to={`/post/${props.id}`}><h4>{props.title}</h4>
+                <p>{props.body.slice(0,40)}...</p>
+            </Link>
         </React.Fragment>
     )
 }

@@ -1,13 +1,12 @@
 import React from 'react';
 import PostItem from './PostItem'
 
-const PostList = () => {
+const PostList = (props) => {
     return (
         <React.Fragment>
-            <PostItem />
-            <PostItem />
-            <PostItem />
-            <PostItem />
+         {props.postDataArr.map((el)=>{
+              return <PostItem title={el.title} body={el.body} id={el.id} key={el.id}/>
+         })}
         </React.Fragment>
     )
 }
