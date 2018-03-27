@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import PostData from "../entities/PostData";
 import AuthorData from "../entities/AuthorData";
 
@@ -36,6 +36,15 @@ class fetchPosts1 extends Component {
         }).then((response) => {
             return response
         })
+    }
+    GetPostsBySameAuthor(userId) {
+        return fetch(`https://jsonplaceholder.typicode.com/posts?${userId}`)
+            .then((response) => {
+                return response.json()
+            })
+            .then((responseJson) => {
+                return responseJson;
+            })
     }
 
 

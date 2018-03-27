@@ -8,7 +8,8 @@ class Post extends Component {
         super(props)
         this.state = {
             postData: [],
-            userIdData : ''
+            userIdData : '',
+            userIdPostsFromSameAuthor: ''
         }
     }
 
@@ -23,17 +24,25 @@ class Post extends Component {
                         userIdData:response
                     })
                 })
+                fetchPosts.GetPostsBySameAuthor(response.userId).then((response)=>{
+                    this.setState({
+                        userIdPostsFromSameAuthor:response
+                    })
+                })
             })
+            
            
     }
 
     render() {
+        console.log(this.state.userIdPostsFromSameAuthor);
+
         // console.log(this.state.postData)
-        console.log(this.state.userIdData )
+        // console.log(this.state.userIdData )
 
         return (
             <React.Fragment>
-                <PostDetail title={this.state.postData.title} body={this.state.postData.body} authorName={this.state.userIdData.name} />
+                <PostDetail title={this.state.postData.title} body={this.state.postData.body} userId={this.state.postData.userId} authorName={this.state.userIdData.name} />
                 <TitlesFromSameAuthor />
             </React.Fragment>
         )

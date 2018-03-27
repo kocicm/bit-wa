@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 
 class AuthorData{
     constructor(fetchObj){
@@ -10,6 +9,8 @@ class AuthorData{
         this.street = fetchObj.address.street
         this.city = fetchObj.address.city
         this.zip = fetchObj.address.zipcode
+        this.cname = fetchObj.company.name
+        this.slogan = fetchObj.company.catchPhrase
      
     }
 }

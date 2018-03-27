@@ -37,8 +37,8 @@ class AuthorDetails extends Component {
                 </div>
                 <div>
                     <h2>Company</h2>
-                    <p>name: Gwennfjksd</p>
-                    <p>slogan: 77068</p>
+                    <p>name: {this.state.authorDetail.cname}</p>
+                    <p>slogan: {this.state.authorDetail.slogan}</p>
                 </div>
             </React.Fragment>
         )
